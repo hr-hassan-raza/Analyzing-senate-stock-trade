@@ -35,19 +35,19 @@ The add_amount_ranges and sub_amount_ranges should add and subtract two amount r
 Hints
 Initialize the module variable to a sentinel value to indicate when the data has not been read.
 You can use %autoreload to automatically reload modules as you edit them. Do note, however, that this will mask the effects of trying to not keep reloading the data! You can also use importlib.reload to do this manually.
-1b. Ticker Analysis (15 pts)
+1b. Ticker Analysis 
 Create an ticker.py module that has two methods that both take one parameter, the ticker symbol. Use the get_data method from the data module to obtain the data. The first method, count_trades, should return a dictionary of the form {<senator>: <count>} with the counts of trades for each senator. The second method, sum_trades, should return a dictionary of the form {<senator>: (<min_value>,<max_value)} with the range of possible trade values. Use the util.add_amount_ranges method from Part 1a to add the amount ranges.
 
 Hints
 Make sure to import the util module! You might consider using relative imports to do this from a sibling module.
 You may use collections.Counter for count_trades.
 You could consider using collections.defaultdict to help with sum_trades. You can use a lambda function as the argument to defaultdict to initialize the key-value pairs with a tuple.
-1c. Comparison (15 pts)
+1c. Comparison 
 Create a compare.py module that calculates comparative information between two senators. Given two senators’ names as parameters, the count_diff method should return the difference between the number of transactions between the two senators, and the amount_diff method should return the ranged difference between the amounts of all trades. This difference should be computed by using the util.sub_amount_ranges method from Part 1a.
 
 Hints
 Consider testing the functions via code in a notebook. You may also do this in the modules themselves, but remember to make sure they only run when the module is run as a script.
-1d. Package (5 pts)
+1d. Package 
 Make sure all three analysis modules live in a single senate_stock_trades package. Add an __init__.py file for completeness. It may contain documentation and the pass keyword.
 
 2. Stock Analysis Program 
